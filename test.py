@@ -8,12 +8,12 @@ from sklearn.metrics import accuracy_score
 
 
 # Set path for the input (model)
-MODEL_DIR = os.environ["MODEL_DIR"]
+MODEL_DIR = os.environ.get("models","models")
 model_file = 'logit_model.joblib'
 model_path = os.path.join(MODEL_DIR, model_file)
 
 # Set path for the input (test data)
-PROCESSED_DATA_DIR = os.environ["PROCESSED_DATA_DIR"]
+PROCESSED_DATA_DIR = os.environ.get("preprocessed_data","preprocessed_data")
 test_data_file = 'test.csv'
 test_data_path = os.path.join(PROCESSED_DATA_DIR, test_data_file)
 
@@ -43,7 +43,7 @@ test_metadata = {
 
 
 # Set output path
-RESULTS_DIR = os.environ["RESULTS_DIR"]
+RESULTS_DIR = os.environ.get("results","results")
 test_results_file = 'test_metadata.json'
 results_path = os.path.join(RESULTS_DIR, test_results_file)
 

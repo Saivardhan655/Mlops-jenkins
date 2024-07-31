@@ -2,7 +2,7 @@ FROM jupyter/scipy-notebook
 USER root
 RUN apt-get update && apt-get install -y jq
 RUN pip install joblib
-RUN mkdir model raw_data processed_data results
+RUN mkdir models raw_data preprocessed_data results
 ENV MODEL_DIR=/home/jovyan/model
 ENV RAW_DATA_DIR=/home/jovyan/raw_data
 ENV PROCESSED_DATA_DIR=/home/jovyan/processed_data
